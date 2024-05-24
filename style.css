@@ -54,17 +54,37 @@ footer {
     }
   }
   #Judul {
-    margin-top: -52px;
+    margin-top: -46px;
     margin-left: 25px;
-    text-shadow: -1px -1px 0 brown, /* Shadow ke kiri atas */ 1px -1px 0 brown,
-      /* Shadow ke kanan atas */ -1px 1px 0 brown,
-      /* Shadow ke kiri bawah */ 1px 1px 0 black; /* Shadow ke kanan bawah */
-    color: rgb(255, 230, 0);
+    text-shadow: 0 0 0.125em rgb(255, 230, 0), 0 0 0.35em rgb(255, 230, 0),
+      0 0 0.6em rgb(255, 230, 0);
+    animation: flicker 5s ease-in-out alternate;
+    color: rgb(134, 192, 0);
     text-align: center;
+    line-height: 1.1;
     width: 250px; /* Lebar persegi panjang */
     height: 100px; /* Tinggi persegi panjang */
     font-size: 17px;
     z-index: 2;
+  }
+
+  @keyframes flicker {
+    0%,
+    18%,
+    22%,
+    25%,
+    53%,
+    57%,
+    100% {
+      text-shadow: 0 0 0.125em rgb(255, 230, 0), 0 0 0.35em rgb(255, 230, 0),
+        0 0 0.6em rgb(255, 230, 0);
+    }
+    20%,
+    24%,
+    55% {
+      text-shadow: 0 0 0.125em rgb(255, 230, 0), 0 0 0.2em rgb(255, 230, 0),
+        0 0 0.47em rgb(255, 230, 0);
+    }
   }
 
   .kotak_sensorvalue {
@@ -88,7 +108,7 @@ footer {
   }
   #textsuhu {
     margin-top: 106px;
-    margin-left: 155px;
+    margin-left: 170px;
   }
   #textcahaya {
     font-size: 12px;
@@ -97,7 +117,7 @@ footer {
     margin-left: 152px;
   }
   #textph {
-    margin-left: 112px;
+    margin-left: 110px;
     margin-top: 41px;
     font-size: 15px;
     width: 100%;
@@ -209,3 +229,4 @@ footer {
     color: #fff6d9;
   }
 }
+
