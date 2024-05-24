@@ -1,0 +1,211 @@
+/* Gaya umum untuk semua perangkat */
+body {
+  font-family: "Holtwood One SC", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url(IMG/wallpaper_jungle.jpg);
+  background-size: cover; /* Menutupi seluruh layar */
+  background-repeat: no-repeat; /* Menghindari pengulangan gambar */
+  background-attachment: fixed; /* Membuat gambar tetap di tempat saat menggulir */
+  background-position: center center; /* Posisikan gambar di tengah */
+  min-height: 100vh;
+}
+
+header,
+main,
+footer {
+  padding: 5px;
+  text-align: center;
+}
+
+#Judul {
+  font-size: 20px;
+}
+
+/* Media query untuk perangkat dengan lebar layar kurang dari 768px */
+@media (max-width: 768px) {
+  header,
+  main,
+  footer {
+    padding: 5px;
+  }
+
+  .kotak_header {
+    margin: auto;
+    margin-top: 20px;
+    width: 300px; /* Lebar persegi panjang */
+    height: 100px; /* Tinggi persegi panjang */
+    background-image: url(IMG/kayu_judul.png);
+    background-size: cover; /* Menutupi seluruh layar */
+  }
+  .animasi-skala {
+    margin-top: -23px;
+    width: 200px; /* Lebar persegi panjang */
+    height: 100px;
+    animation: skala-berulang 1s infinite alternate; /* Menerapkan animasi skala secara terus-menerus */
+  }
+
+  @keyframes skala-berulang {
+    0% {
+      transform: scale(0.9); /* Skala awal */
+    }
+    100% {
+      transform: scale(1); /* Skala akhir */
+    }
+  }
+  #Judul {
+    margin-top: -52px;
+    margin-left: 25px;
+    text-shadow: -1px -1px 0 brown, /* Shadow ke kiri atas */ 1px -1px 0 brown,
+      /* Shadow ke kanan atas */ -1px 1px 0 brown,
+      /* Shadow ke kiri bawah */ 1px 1px 0 black; /* Shadow ke kanan bawah */
+    color: rgb(255, 230, 0);
+    text-align: center;
+    width: 250px; /* Lebar persegi panjang */
+    height: 100px; /* Tinggi persegi panjang */
+    font-size: 17px;
+    z-index: 2;
+  }
+
+  .kotak_sensorvalue {
+    margin: auto;
+    margin-bottom: -5px;
+    width: 330px; /* Lebar persegi panjang */
+    height: 430px; /* Tinggi persegi panjang */
+    background-image: url(IMG/sensor_value.png);
+    background-size: cover; /* Menutupi seluruh layar */
+  }
+  .textvalue {
+    text-shadow: -1px -1px 0 brown, /* Shadow ke kiri atas */ 1px -1px 0 brown,
+      /* Shadow ke kanan atas */ -1px 1px 0 brown,
+      /* Shadow ke kiri bawah */ 1px 1px 0 black; /* Shadow ke kanan bawah */
+    color: #fff6d9;
+    position: absolute;
+    z-index: 1;
+    margin-left: 0px;
+    margin-top: 0px;
+    width: 50%;
+  }
+  #textsuhu {
+    margin-top: 106px;
+    margin-left: 155px;
+  }
+  #textcahaya {
+    font-size: 12px;
+    line-height: 1.1;
+    margin-top: 38px;
+    margin-left: 152px;
+  }
+  #textph {
+    margin-left: 112px;
+    margin-top: 41px;
+    font-size: 15px;
+    width: 100%;
+  }
+  #textkelembapan {
+    margin-top: 42px;
+    font-size: 13px;
+    margin-left: 148px;
+  }
+  #valuesuhu {
+    margin-top: 105px;
+    font-family: sans-serif;
+    font-weight: 700;
+    text-align: center;
+    font-size: 22px;
+    margin-left: 90px;
+    position: absolute;
+    z-index: 2;
+  }
+  #valuecahaya {
+    font-family: sans-serif;
+    font-weight: 700;
+    text-align: center;
+    font-size: 22px;
+    margin-left: 90px;
+    position: absolute;
+    z-index: 2;
+  }
+  #valueph {
+    margin-top: 28px;
+    font-family: sans-serif;
+    font-weight: 700;
+    text-align: center;
+    font-size: 22px;
+    margin-left: 90px;
+    position: absolute;
+    z-index: 2;
+  }
+  #valuekelembapan {
+    margin-top: 25px;
+    font-family: sans-serif;
+    font-weight: 700;
+    text-align: center;
+    font-size: 22px;
+    margin-left: 90px;
+    position: absolute;
+    z-index: 2;
+  }
+
+  #mulai {
+    margin-top: 350px;
+    margin-left: 10px;
+    width: 80px;
+    height: 64px;
+    background-color: inherit;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    z-index: 4;
+  }
+  #mulai img {
+    width: 100%; /* Mengatur lebar gambar agar sesuai dengan lebar tombol */
+    height: 100%; /* Mengatur tinggi gambar agar sesuai dengan tinggi tombol */
+    object-fit: cover; /* Untuk memastikan gambar ditampilkan dalam persegi */
+    transition: transform 0.3s ease;
+  }
+
+  #mulai:hover img {
+    transform: scale(1.1); /* Membuat gambar membesar saat dihover */
+  }
+
+  #mulai:active img {
+    transform: scale(0.9); /* Membuat gambar mengecil saat tombol ditekan */
+  }
+
+  #reset {
+    margin-left: -90px;
+    margin-top: 350px;
+    width: 80px;
+    height: 64px;
+    background-color: inherit;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    z-index: 3;
+  }
+  #reset img {
+    width: 100%; /* Mengatur lebar gambar agar sesuai dengan lebar tombol */
+    height: 100%; /* Mengatur tinggi gambar agar sesuai dengan tinggi tombol */
+    object-fit: cover; /* Untuk memastikan gambar ditampilkan dalam persegi */
+    transition: transform 0.3s ease;
+  }
+  #reset:hover img {
+    transform: scale(1.1); /* Membuat gambar membesar saat dihover */
+  }
+
+  #reset:active img {
+    transform: scale(0.9); /* Membuat gambar mengecil saat tombol ditekan */
+  }
+  .keterangan {
+    margin: auto;
+    width: 240px; /* Lebar persegi panjang */
+    height: 100px; /* Tinggi persegi panjang */
+    background-image: url(IMG/keterangan.png);
+    background-size: cover; /* Menutupi seluruh layar */
+  }
+  #jenispohon {
+    margin-top: -45px;
+    color: #fff6d9;
+  }
+}
