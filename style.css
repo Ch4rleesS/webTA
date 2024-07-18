@@ -59,7 +59,7 @@ footer {
     text-shadow: 0 0 0.125em rgb(255, 230, 0), 0 0 0.35em rgb(255, 230, 0),
       0 0 0.6em rgb(255, 230, 0);
     animation: flicker 5s ease-in-out alternate infinite;
-    color: rgb(134, 192, 0);
+    color: rgb(84, 112, 26);
     text-align: center;
     line-height: 1.1;
     width: 250px; /* Lebar persegi panjang */
@@ -87,12 +87,19 @@ footer {
     }
   }
 
+  .centered-textbox {
+    text-align: center;
+    pointer-events: none;
+    user-select: none;
+  }
+
   .kotak_sensorvalue {
     margin: auto;
+    margin-top: -15px;
     margin-bottom: -5px;
     width: 330px; /* Lebar persegi panjang */
-    height: 430px; /* Tinggi persegi panjang */
-    background-image: url(IMG/sensor_value.png);
+    height: 495px; /* Tinggi persegi panjang */
+    background-image: url(IMG/sensor_value2.png);
     background-size: cover; /* Menutupi seluruh layar */
   }
   .textvalue {
@@ -104,55 +111,71 @@ footer {
     z-index: 1;
     margin-left: 0px;
     margin-top: 0px;
-    width: 50%;
+    width: 70%;
   }
   #textsuhu {
-    margin-top: 106px;
-    margin-left: 170px;
+    margin-top: 98px;
+    line-height: 1.1;
+    font-size: 12px;
+    margin-left: 143px;
   }
   #textcahaya {
     font-size: 12px;
-    line-height: 1.1;
+    line-height: 1.05;
     margin-top: 38px;
-    margin-left: 152px;
+    margin-left: 145px;
   }
   #textph {
-    margin-left: 110px;
-    margin-top: 41px;
-    font-size: 15px;
+    margin-left: 73px;
+    margin-top: 36px;
+    font-size: 14px;
     width: 100%;
   }
   #textkelembapan {
-    margin-top: 42px;
-    font-size: 13px;
-    margin-left: 148px;
+    margin-top: 33px;
+    line-height: 1.05;
+    font-size: 12px;
+    margin-left: 145px;
+  }
+  #textkelembapanudara {
+    margin-top: 39px;
+    line-height: 1.05;
+    font-size: 12px;
+    margin-left: 140px;
+  }
+  #textsuhuudara {
+    margin-top: 37px;
+    line-height: 1.05;
+    font-size: 11px;
+    margin-left: 140px;
   }
   #valuesuhu {
-    margin-top: 105px;
+    margin-top: 95px;
     font-family: sans-serif;
     font-weight: 700;
     text-align: center;
-    font-size: 22px;
-    margin-left: 90px;
+    font-size: 14px;
+    margin-left: 100px;
     position: absolute;
     z-index: 2;
   }
   #valuecahaya {
     font-family: sans-serif;
+    margin-top: 30px;
     font-weight: 700;
     text-align: center;
-    font-size: 22px;
-    margin-left: 90px;
+    font-size: 14px;
+    margin-left: 100px;
     position: absolute;
     z-index: 2;
   }
   #valueph {
-    margin-top: 28px;
+    margin-top: 25px;
     font-family: sans-serif;
     font-weight: 700;
     text-align: center;
-    font-size: 22px;
-    margin-left: 90px;
+    font-size: 14px;
+    margin-left: 100px;
     position: absolute;
     z-index: 2;
   }
@@ -161,17 +184,39 @@ footer {
     font-family: sans-serif;
     font-weight: 700;
     text-align: center;
-    font-size: 22px;
-    margin-left: 90px;
+    font-size: 14px;
+    margin-left: 100px;
+    position: absolute;
+    z-index: 2;
+  }
+
+  #valuesuhuudara {
+    margin-top: -25px;
+    font-family: sans-serif;
+    font-weight: 700;
+    text-align: center;
+    font-size: 14px;
+    margin-left: 98px;
+    position: absolute;
+    z-index: 2;
+  }
+
+  #valuekelembapanudara {
+    margin-top: -35px;
+    font-family: sans-serif;
+    font-weight: 700;
+    text-align: center;
+    font-size: 14px;
+    margin-left: 98px;
     position: absolute;
     z-index: 2;
   }
 
   #mulai {
-    margin-top: 350px;
+    margin-top: 420px;
     margin-left: 10px;
-    width: 80px;
-    height: 64px;
+    width: 70px;
+    height: 54px;
     background-color: inherit;
     border: none;
     cursor: pointer;
@@ -186,18 +231,18 @@ footer {
   }
 
   #mulai:hover img {
-    transform: scale(1.1); /* Membuat gambar membesar saat dihover */
+    transform: scale(1.2); /* Membuat gambar membesar saat dihover */
   }
 
   #mulai:active img {
-    transform: scale(0.9); /* Membuat gambar mengecil saat tombol ditekan */
+    transform: scale(0.8); /* Membuat gambar mengecil saat tombol ditekan */
   }
 
   #reset {
-    margin-left: -90px;
-    margin-top: 350px;
-    width: 80px;
-    height: 64px;
+    margin-left: -80px;
+    margin-top: 420px;
+    width: 70px;
+    height: 54px;
     background-color: inherit;
     border: none;
     cursor: pointer;
@@ -211,21 +256,29 @@ footer {
     transition: transform 0.3s ease;
   }
   #reset:hover img {
-    transform: scale(1.1); /* Membuat gambar membesar saat dihover */
+    transform: scale(1.2); /* Membuat gambar membesar saat dihover */
   }
 
   #reset:active img {
-    transform: scale(0.9); /* Membuat gambar mengecil saat tombol ditekan */
+    transform: scale(0.8); /* Membuat gambar mengecil saat tombol ditekan */
   }
+
   .keterangan {
     margin: auto;
+    color: #fff6d9;
+    margin-top: -10px;
     width: 240px; /* Lebar persegi panjang */
     height: 100px; /* Tinggi persegi panjang */
     background-image: url(IMG/keterangan.png);
     background-size: cover; /* Menutupi seluruh layar */
   }
+  #jenispohontext {
+    margin-top: -92px;
+    font-size: 13px;
+    color: #fff6d9;
+  }
   #jenispohon {
-    margin-top: -45px;
+    margin-top: 25px;
     color: #fff6d9;
   }
 }

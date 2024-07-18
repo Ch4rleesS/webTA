@@ -38,6 +38,23 @@ function updateAllValues() {
   });
 }
 
+function updateAllValues2() {
+  const values = [
+    {
+      id: "valuesuhuudara",
+      url: "https://script.google.com/macros/s/AKfycbw5H6-cxrorgJrdqQddxFxw5LW0AGUJ2fYyp2hWJzPoizvxAnGkO77POTwSWjMMHagf/exec",
+    },
+    {
+      id: "valuekelembapanudara",
+      url: "https://script.google.com/macros/s/AKfycbw2K1X5hgq2wvPJTt5kMmRdknmZhIIhY7xsTJny2_pPrgzzycAzBfmUs5qPQZbVBnjr/exec",
+    },
+  ];
+
+  values.forEach((item) => {
+    updateValue(item.id, item.url);
+  });
+}
+
 function resetAllValues() {
   const ids = [
     "valuesuhu",
@@ -45,9 +62,11 @@ function resetAllValues() {
     "valueph",
     "valuekelembapan",
     "jenispohon",
+    "valuekelembapanudara",
+    "valuesuhuudara",
   ];
   ids.forEach((id) => {
-    document.getElementById(id).innerText = "";
+    document.getElementById(id).innerText = " ";
   });
 }
 
@@ -63,3 +82,9 @@ document.addEventListener("DOMContentLoaded", () => {
     resetAllValues();
   });
 });
+
+// Panggil fungsi updateAllValues2 setiap 5 detik (5000 milidetik)
+setInterval(updateAllValues2, 5000);
+
+// Panggil fungsi sekali saat halaman pertama kali dimuat
+updateAllValues2();
