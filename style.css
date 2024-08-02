@@ -279,6 +279,9 @@ footer {
   }
   #jenispohon {
     margin-top: 25px;
+    margin-left: 80px;
+    width: 200px; 
+    word-wrap: break-word;
     color: #fff6d9;
   }
 }
