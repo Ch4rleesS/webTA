@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Judul Halaman</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Holtwood+One+SC&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="kotak_header">
+        <img src="IMG/bintang.png" alt="Dbintangjj" class="animasi-skala" />
+        <p id="Judul">Sistem pemantau kualitas tanah</p>
+      </div>
+    </header>
+    <main>
+      <section>
+        <div class="kotak_sensorvalue">
+          <div class="textvalue">
+            <p id="valuesuhu" class="centered-textbox"></p>
+            <p id="valuesuhu2" class="centered-textbox">C</p>
+            <p id="textsuhu">suhu Tanah</p>
+            <p id="valuecahaya"></p>
+            <p id="valuecahaya2">LUX</p>
+            <p id="textcahaya">intensitas cahaya</p>
+            <p id="valueph"></p>
+            <p id="valueph2">PH</p>
+            <p id="textph">PH Tanah</p>
+            <p id="valuekelembapan"></p>
+            <p id="valuekelembapan2">%</p>
+            <p id="textkelembapan">Kelembapan tanah</p>
+            <p id="textsuhuudara">Suhu Udara</p>
+            <p id="valuesuhuudara"></p>
+            <p id="valuesuhuudara2">C</p>
+            <p id="textkelembapanudara">Kelembapan Udara</p>
+            <p id="valuekelembapanudara"></p>
+            <p id="valuekelembapanudara2">%</p>
+          </div>
+          <div class="tombol_container">
+            <!-- Tombol-tombol di sini -->
+            <button type="submit" id="mulai">
+              <img src="IMG/btn_mulai.png" alt="gambarmulai1" />
+            </button>
+            <button type="submit" id="reset">
+              <img src="IMG/btn_reset.png" alt="gambarreset1" />
+            </button>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="keterangan"></div>
+        <p id="jenispohontext">jenis pohon</p>
+        <p id="jenispohon"></p>
+      </section>
+    </main>
+    <footer>
+      <button
+        type="submit"
+        id="about"
+        onclick="window.location.href='hal2.html'"
+      >
+        <img src="IMG/tombol_about2.png" alt="gambarabout" />
+      </button>
+      <!-- <p>&copy;</p> -->
+    </footer>
+    <script src="scripts.js"></script>
+  </body>
+</html>

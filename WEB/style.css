@@ -1,0 +1,918 @@
+/* Gaya umum untuk semua perangkat */
+body {
+  font-family: "Holtwood One SC", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url(IMG/wallpaper_jungle.jpg);
+  background-size: cover; /* Menutupi seluruh layar */
+  background-repeat: no-repeat; /* Menghindari pengulangan gambar */
+  background-attachment: fixed; /* Membuat gambar tetap di tempat saat menggulir */
+  background-position: center center; /* Posisikan gambar di tengah */
+  min-height: 100vh;
+}
+@media (min-width: 769px) {
+  header,
+  main,
+  footer {
+    padding: 5px;
+  }
+  .kotak_header {
+    margin: auto;
+    margin-top: 20px;
+    width: 300px; /* Lebar persegi panjang */
+    height: 100px; /* Tinggi persegi panjang */
+    background-image: url(IMG/kayu_judul.png);
+    background-size: cover; /* Menutupi seluruh layar */
+  }
+  .animasi-skala {
+    margin-top: -23px;
+    width: 200px; /* Lebar persegi panjang */
+    height: 100px;
+    animation: skala-berulang 1s infinite alternate; /* Menerapkan animasi skala secara terus-menerus */
+  }
+
+  @keyframes skala-berulang {
+    0% {
+      transform: scale(0.9); /* Skala awal */
+    }
+    100% {
+      transform: scale(1); /* Skala akhir */
+    }
+  }
+  #Judul {
+    margin-top: -46px;
+    margin-left: 25px;
+    text-shadow: 0 0 0.125em rgb(255, 230, 0), 0 0 0.35em rgb(255, 230, 0),
+      0 0 0.6em rgb(255, 230, 0);
+    animation: flicker 5s ease-in-out alternate infinite;
+    color: rgb(84, 112, 26);
+    text-align: center;
+    line-height: 1.1;
+    width: 250px; /* Lebar persegi panjang */
+    height: 100px; /* Tinggi persegi panjang */
+    font-size: 17px;
+    z-index: 2;
+  }
+
+  @keyframes flicker {
+    0%,
+    18%,
+    22%,
+    25%,
+    53%,
+    57%,
+    100% {
+      text-shadow: 0 0 0.125em rgb(255, 230, 0), 0 0 0.35em rgb(255, 230, 0),
+        0 0 0.6em rgb(255, 230, 0);
+    }
+    20%,
+    24%,
+    55% {
+      text-shadow: 0 0 0.125em rgb(255, 230, 0), 0 0 0.2em rgb(255, 230, 0),
+        0 0 0.47em rgb(255, 230, 0);
+    }
+  }
+
+  .centered-textbox {
+    text-align: center;
+    pointer-events: none;
+    user-select: none;
+  }
+
+  .kotak_sensorvalue {
+    margin: auto;
+    margin-top: -05px;
+    margin-bottom: -5px;
+    width: 315px; /* Lebar persegi panjang */
+    height: 495px; /* Tinggi persegi panjang */
+    background-image: url(IMG/sensor_value3.png);
+    background-size: cover; /* Menutupi seluruh layar */
+  }
+  .textvalue {
+    text-shadow: -1px -1px 0 brown, /* Shadow ke kiri atas */ 1px -1px 0 brown,
+      /* Shadow ke kanan atas */ -1px 1px 0 brown,
+      /* Shadow ke kiri bawah */ 1px 1px 0 black; /* Shadow ke kanan bawah */
+    color: #fff6d9;
+    position: absolute;
+    z-index: 1;
+    margin-left: -13px;
+    margin-top: 0px;
+    width: 70%;
+  }
+  #textsuhu {
+    margin-top: 93px;
+    line-height: 1.1;
+    font-size: 12px;
+    margin-right: 525px;
+  }
+  #textcahaya {
+    font-size: 12px;
+    line-height: 1.05;
+    margin-top: 39px;
+    margin-right: 0px;
+    margin-left: 160px;
+    max-width: 100px;
+  }
+  #textph {
+    margin-top: 36px;
+    font-size: 14px;
+    margin-right: 525px;
+  }
+  #textkelembapan {
+    margin-top: 34px;
+    line-height: 1.05;
+    font-size: 12px;
+    margin-left: 160px;
+    max-width: 100px;
+  }
+  #textkelembapanudara {
+    margin-top: 38px;
+    line-height: 1.05;
+    font-size: 12px;
+    margin-left: 160px;
+    max-width: 100px;
+  }
+  #textsuhuudara {
+    margin-top: 40px;
+    line-height: 1.05;
+    font-size: 11px;
+    margin-right: 525px;
+  }
+  #valuesuhu {
+    margin-top: 83px;
+    font-family: sans-serif;
+    font-weight: 700;
+    text-align: center;
+    font-size: 14px;
+    margin-left: 103px;
+    position: absolute;
+    z-index: 2;
+  }
+  #valuesuhu2 {
+    margin-top: 103px;
+    font-family: sans-serif;
+    font-weight: 700;
+    text-align: center;
+    font-size: 14px;
+    margin-left: 110px;
+    position: absolute;
+    z-index: 2;
+  }
+  #valuecahaya {
+    font-family: sans-serif;
+    margin-top: 23px;
+    font-weight: 700;
+    text-align: center;
+    font-size: 13px;
+    margin-left: 99px;
+    position: absolute;
+    z-index: 2;
+  }
+  #valuecahaya2 {
+    font-family: sans-serif;
+    margin-top: 44px;
+    font-weight: 700;
+    text-align: center;
+    font-size: 13px;
+    margin-left: 103px;
+    position: absolute;
+    z-index: 2;
+  }
+  #valueph {
+    margin-top: 17px;
+    font-family: sans-serif;
+    font-weight: 700;
+    text-align: center;
+    font-size: 14px;
+    margin-left: 104px;
+    position: absolute;
+    z-index: 2;
+  }
+  #valueph2 {
+    margin-top: 37px;
+    font-family: sans-serif;
+    font-weight: 700;
+    text-align: center;
+    font-size: 14px;
+    margin-left: 104px;
+    position: absolute;
+    z-index: 2;
+  }
+  #valuekelembapan {
+    margin-top: 16px;
+    font-family: sans-serif;
+    font-weight: 700;
+    text-align: center;
+    font-size: 14px;
+    margin-left: 103px;
+    position: absolute;
+    z-index: 2;
+  }
+  #valuekelembapan2 {
+    margin-top: 34px;
+    font-family: sans-serif;
+    font-weight: 700;
+    text-align: center;
+    font-size: 15px;
+    margin-left: 108px;
+    position: absolute;
+    z-index: 2;
+  }
+
+  #valuesuhuudara {
+    margin-top: -35px;
+    font-family: sans-serif;
+    font-weight: 700;
+    text-align: center;
+    font-size: 14px;
+    margin-left: 105px;
+    position: absolute;
+    z-index: 2;
+  }
+
+  #valuesuhuudara2 {
+    margin-top: -15px;
+    font-family: sans-serif;
+    font-weight: 700;
+    text-align: center;
+    font-size: 14px;
+    margin-left: 105px;
+    position: absolute;
+    z-index: 2;
+  }
+
+  #valuekelembapanudara {
+    margin-top: -42px;
+    font-family: sans-serif;
+    font-weight: 700;
+    text-align: center;
+    font-size: 14px;
+    margin-left: 105px;
+    position: absolute;
+    z-index: 2;
+  }
+
+  #valuekelembapanudara2 {
+    margin-top: -21px;
+    font-family: sans-serif;
+    font-weight: 700;
+    text-align: center;
+    font-size: 14px;
+    margin-left: 105px;
+    position: absolute;
+    z-index: 2;
+  }
+
+  #mulai {
+    margin-top: 420px;
+    margin-left: 10px;
+    width: 70px;
+    height: 54px;
+    background-color: inherit;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    z-index: 4;
+  }
+  #mulai img {
+    width: 100%; /* Mengatur lebar gambar agar sesuai dengan lebar tombol */
+    height: 100%; /* Mengatur tinggi gambar agar sesuai dengan tinggi tombol */
+    object-fit: cover; /* Untuk memastikan gambar ditampilkan dalam persegi */
+    transition: transform 0.3s ease;
+  }
+
+  #mulai:hover img {
+    transform: scale(1.2); /* Membuat gambar membesar saat dihover */
+  }
+
+  #mulai:active img {
+    transform: scale(0.8); /* Membuat gambar mengecil saat tombol ditekan */
+  }
+
+  #reset {
+    margin-left: -80px;
+    margin-top: 420px;
+    width: 70px;
+    height: 54px;
+    background-color: inherit;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    z-index: 3;
+  }
+  #reset img {
+    width: 100%; /* Mengatur lebar gambar agar sesuai dengan lebar tombol */
+    height: 100%; /* Mengatur tinggi gambar agar sesuai dengan tinggi tombol */
+    object-fit: cover; /* Untuk memastikan gambar ditampilkan dalam persegi */
+    transition: transform 0.3s ease;
+  }
+  #reset:hover img {
+    transform: scale(1.2); /* Membuat gambar membesar saat dihover */
+  }
+
+  #reset:active img {
+    transform: scale(0.8); /* Membuat gambar mengecil saat tombol ditekan */
+  }
+
+  #about {
+    margin-top: -300px;
+    margin-left: 250px;
+    width: 50px;
+    height: 45px;
+    background-color: inherit;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    z-index: 5;
+  }
+
+  #about img {
+    width: 300%; /* Mengatur lebar gambar agar sesuai dengan lebar tombol */
+    height: 300%; /* Mengatur tinggi gambar agar sesuai dengan tinggi tombol */
+    object-fit: cover; /* Untuk memastikan gambar ditampilkan dalam persegi */
+    transition: transform 0.3s ease;
+  }
+  #about:hover img {
+    transform: scale(1.5); /* Membuat gambar membesar saat dihover */
+  }
+
+  #about:active img {
+    transform: scale(0.8); /* Membuat gambar mengecil saat tombol ditekan */
+  }
+
+  .keterangan {
+    margin: auto;
+    color: #fff6d9;
+    margin-top: -7px;
+    width: 240px; /* Lebar persegi panjang */
+    height: 100px; /* Tinggi persegi panjang */
+    background-image: url(IMG/keterangan.png);
+    background-size: cover; /* Menutupi seluruh layar */
+  }
+  #jenispohontext {
+    margin-top: -92px;
+    font-size: 13px;
+    color: #fff6d9;
+  }
+  #jenispohon {
+    margin-top: 18px;
+    margin-left: 80px;
+    width: 200px; /* Menentukan lebar maksimal dari paragraf */
+    word-wrap: break-word; /* Memastikan teks akan turun ke baris berikutnya jika terlalu panjang */
+    color: #fff6d9;
+    font-size: 10px;
+    margin-left: 570px;
+  }
+
+  #x {
+    margin-top: -10px;
+    margin-left: -170px;
+    width: 64px;
+    height: 55px;
+    background-color: inherit;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    z-index: 5;
+  }
+
+  #x img {
+    width: 100%; /* Mengatur lebar gambar agar sesuai dengan lebar tombol */
+    height: 100%; /* Mengatur tinggi gambar agar sesuai dengan tinggi tombol */
+    object-fit: cover; /* Untuk memastikan gambar ditampilkan dalam persegi */
+    transition: transform 0.3s ease;
+  }
+  #x:hover img {
+    transform: scale(1.5); /* Membuat gambar membesar saat dihover */
+  }
+
+  #x:active img {
+    transform: scale(0.8); /* Membuat gambar mengecil saat tombol ditekan */
+  }
+  #aboout {
+    text-shadow: -1px -1px 0 brown, /* Shadow ke kiri atas */ 1px -1px 0 brown,
+      /* Shadow ke kanan atas */ -1px 1px 0 brown,
+      /* Shadow ke kiri bawah */ 1px 1px 0 black; /* Shadow ke kanan bawah */
+    color: #fff6d9;
+    position: absolute;
+    z-index: 1;
+    margin-left: 200px;
+    margin-top: -25px;
+    font-size: 28px;
+    width: 70%;
+  }
+  .kotak_about {
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: -5px;
+    width: 360px; /* Lebar persegi panjang */
+    height: 700px; /* Tinggi persegi panjang */
+    background-image: url(IMG/kotaksuhu.png);
+    background-size: cover; /* Menutupi seluruh layar */
+  }
+  .text_abo0ut {
+    margin: 0 auto;
+    max-width: 270px;
+    margin-top: -620px;
+    font-size: 12px;
+    font-family: arial;
+    color: aliceblue;
+    z-index: 2;
+    width: 300px; /* Atur lebar sesuai kebutuhan */
+    height: 560px;
+    overflow-y: scroll; /* Menambahkan scrollbar vertikal */
+    overflow-x: hidden; /* Menyembunyikan scrollbar horizontal */
+    border: 1px solid #ccc; /* Tambahkan border untuk visual */
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  h1 {
+    font-size: 20px;
+    margin-top: -10px;
+    margin-bottom: 15px;
+    margin-right: 20px;
+    text-align: center;
+  }
+  ol {
+    padding-left: 20px;
+    text-align: left;
+  }
+  li {
+    margin-bottom: 15px;
+  }
+  #perancang {
+    margin-top: 20px;
+  }
+  .student-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .student-container img {
+    width: 80px;
+    height: 120px;
+    margin-right: 20px;
+    border-radius: 5px;
+  }
+  .student-description {
+    max-width: 500px;
+  }
+
+  header,
+  main,
+  footer {
+    padding: 5px;
+    text-align: center;
+  }
+
+  #Judul {
+    font-size: 20px;
+  }
+}
+
+/* Media query untuk perangkat dengan lebar layar kurang dari 768px */
+@media (max-width: 768px) {
+  header,
+  main,
+  footer {
+    padding: 5px;
+  }
+
+  .kotak_header {
+    margin: auto;
+    margin-top: 20px;
+    width: 300px; /* Lebar persegi panjang */
+    height: 100px; /* Tinggi persegi panjang */
+    background-image: url(IMG/kayu_judul.png);
+    background-size: cover; /* Menutupi seluruh layar */
+  }
+  .animasi-skala {
+    margin-top: -23px;
+    width: 200px; /* Lebar persegi panjang */
+    height: 100px;
+    animation: skala-berulang 1s infinite alternate; /* Menerapkan animasi skala secara terus-menerus */
+  }
+
+  @keyframes skala-berulang {
+    0% {
+      transform: scale(0.9); /* Skala awal */
+    }
+    100% {
+      transform: scale(1); /* Skala akhir */
+    }
+  }
+  #Judul {
+    margin-top: -46px;
+    margin-left: 25px;
+    text-shadow: 0 0 0.125em rgb(255, 230, 0), 0 0 0.35em rgb(255, 230, 0),
+      0 0 0.6em rgb(255, 230, 0);
+    animation: flicker 5s ease-in-out alternate infinite;
+    color: rgb(84, 112, 26);
+    text-align: center;
+    line-height: 1.1;
+    width: 250px; /* Lebar persegi panjang */
+    height: 100px; /* Tinggi persegi panjang */
+    font-size: 17px;
+    z-index: 2;
+  }
+
+  @keyframes flicker {
+    0%,
+    18%,
+    22%,
+    25%,
+    53%,
+    57%,
+    100% {
+      text-shadow: 0 0 0.125em rgb(255, 230, 0), 0 0 0.35em rgb(255, 230, 0),
+        0 0 0.6em rgb(255, 230, 0);
+    }
+    20%,
+    24%,
+    55% {
+      text-shadow: 0 0 0.125em rgb(255, 230, 0), 0 0 0.2em rgb(255, 230, 0),
+        0 0 0.47em rgb(255, 230, 0);
+    }
+  }
+
+  .centered-textbox {
+    text-align: center;
+    pointer-events: none;
+    user-select: none;
+  }
+
+  .kotak_sensorvalue {
+    margin: auto;
+    margin-top: -05px;
+    margin-bottom: -5px;
+    width: 315px; /* Lebar persegi panjang */
+    height: 495px; /* Tinggi persegi panjang */
+    background-image: url(IMG/sensor_value3.png);
+    background-size: cover; /* Menutupi seluruh layar */
+  }
+  .textvalue {
+    text-shadow: -1px -1px 0 brown, /* Shadow ke kiri atas */ 1px -1px 0 brown,
+      /* Shadow ke kanan atas */ -1px 1px 0 brown,
+      /* Shadow ke kiri bawah */ 1px 1px 0 black; /* Shadow ke kanan bawah */
+    color: #fff6d9;
+    position: absolute;
+    z-index: 1;
+    margin-left: -13px;
+    margin-top: 0px;
+    width: 70%;
+  }
+  #textsuhu {
+    margin-top: 93px;
+    line-height: 1.1;
+    font-size: 12px;
+    margin-left: 155px;
+  }
+  #textcahaya {
+    font-size: 12px;
+    line-height: 1.05;
+    margin-top: 39px;
+    margin-left: 165px;
+  }
+  #textph {
+    margin-left: 85px;
+    margin-top: 36px;
+    font-size: 14px;
+    width: 100%;
+  }
+  #textkelembapan {
+    margin-top: 34px;
+    line-height: 1.05;
+    font-size: 12px;
+    margin-left: 161px;
+  }
+  #textkelembapanudara {
+    margin-top: 38px;
+    line-height: 1.05;
+    font-size: 12px;
+    margin-left: 160px;
+  }
+  #textsuhuudara {
+    margin-top: 40px;
+    line-height: 1.05;
+    font-size: 11px;
+    margin-left: 160px;
+  }
+  #valuesuhu {
+    margin-top: 83px;
+    font-family: sans-serif;
+    font-weight: 700;
+    text-align: center;
+    font-size: 14px;
+    margin-left: 103px;
+    position: absolute;
+    z-index: 2;
+  }
+  #valuesuhu2 {
+    margin-top: 103px;
+    font-family: sans-serif;
+    font-weight: 700;
+    text-align: center;
+    font-size: 14px;
+    margin-left: 110px;
+    position: absolute;
+    z-index: 2;
+  }
+  #valuecahaya {
+    font-family: sans-serif;
+    margin-top: 23px;
+    font-weight: 700;
+    text-align: center;
+    font-size: 13px;
+    margin-left: 99px;
+    position: absolute;
+    z-index: 2;
+  }
+  #valuecahaya2 {
+    font-family: sans-serif;
+    margin-top: 44px;
+    font-weight: 700;
+    text-align: center;
+    font-size: 13px;
+    margin-left: 103px;
+    position: absolute;
+    z-index: 2;
+  }
+  #valueph {
+    margin-top: 17px;
+    font-family: sans-serif;
+    font-weight: 700;
+    text-align: center;
+    font-size: 14px;
+    margin-left: 104px;
+    position: absolute;
+    z-index: 2;
+  }
+  #valueph2 {
+    margin-top: 37px;
+    font-family: sans-serif;
+    font-weight: 700;
+    text-align: center;
+    font-size: 14px;
+    margin-left: 104px;
+    position: absolute;
+    z-index: 2;
+  }
+  #valuekelembapan {
+    margin-top: 16px;
+    font-family: sans-serif;
+    font-weight: 700;
+    text-align: center;
+    font-size: 14px;
+    margin-left: 103px;
+    position: absolute;
+    z-index: 2;
+  }
+  #valuekelembapan2 {
+    margin-top: 34px;
+    font-family: sans-serif;
+    font-weight: 700;
+    text-align: center;
+    font-size: 15px;
+    margin-left: 108px;
+    position: absolute;
+    z-index: 2;
+  }
+
+  #valuesuhuudara {
+    margin-top: -35px;
+    font-family: sans-serif;
+    font-weight: 700;
+    text-align: center;
+    font-size: 14px;
+    margin-left: 105px;
+    position: absolute;
+    z-index: 2;
+  }
+
+  #valuesuhuudara2 {
+    margin-top: -15px;
+    font-family: sans-serif;
+    font-weight: 700;
+    text-align: center;
+    font-size: 14px;
+    margin-left: 105px;
+    position: absolute;
+    z-index: 2;
+  }
+
+  #valuekelembapanudara {
+    margin-top: -42px;
+    font-family: sans-serif;
+    font-weight: 700;
+    text-align: center;
+    font-size: 14px;
+    margin-left: 105px;
+    position: absolute;
+    z-index: 2;
+  }
+
+  #valuekelembapanudara2 {
+    margin-top: -21px;
+    font-family: sans-serif;
+    font-weight: 700;
+    text-align: center;
+    font-size: 14px;
+    margin-left: 105px;
+    position: absolute;
+    z-index: 2;
+  }
+
+  #mulai {
+    margin-top: 420px;
+    margin-left: 10px;
+    width: 70px;
+    height: 54px;
+    background-color: inherit;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    z-index: 4;
+  }
+  #mulai img {
+    width: 100%; /* Mengatur lebar gambar agar sesuai dengan lebar tombol */
+    height: 100%; /* Mengatur tinggi gambar agar sesuai dengan tinggi tombol */
+    object-fit: cover; /* Untuk memastikan gambar ditampilkan dalam persegi */
+    transition: transform 0.3s ease;
+  }
+
+  #mulai:hover img {
+    transform: scale(1.2); /* Membuat gambar membesar saat dihover */
+  }
+
+  #mulai:active img {
+    transform: scale(0.8); /* Membuat gambar mengecil saat tombol ditekan */
+  }
+
+  #reset {
+    margin-left: -80px;
+    margin-top: 420px;
+    width: 70px;
+    height: 54px;
+    background-color: inherit;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    z-index: 3;
+  }
+  #reset img {
+    width: 100%; /* Mengatur lebar gambar agar sesuai dengan lebar tombol */
+    height: 100%; /* Mengatur tinggi gambar agar sesuai dengan tinggi tombol */
+    object-fit: cover; /* Untuk memastikan gambar ditampilkan dalam persegi */
+    transition: transform 0.3s ease;
+  }
+  #reset:hover img {
+    transform: scale(1.2); /* Membuat gambar membesar saat dihover */
+  }
+
+  #reset:active img {
+    transform: scale(0.8); /* Membuat gambar mengecil saat tombol ditekan */
+  }
+
+  #about {
+    margin-top: -10px;
+    margin-left: 120px;
+    width: 50px;
+    height: 45px;
+    background-color: inherit;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    z-index: 5;
+  }
+
+  #about img {
+    width: 100%; /* Mengatur lebar gambar agar sesuai dengan lebar tombol */
+    height: 100%; /* Mengatur tinggi gambar agar sesuai dengan tinggi tombol */
+    object-fit: cover; /* Untuk memastikan gambar ditampilkan dalam persegi */
+    transition: transform 0.3s ease;
+  }
+  #about:hover img {
+    transform: scale(1.5); /* Membuat gambar membesar saat dihover */
+  }
+
+  #about:active img {
+    transform: scale(0.8); /* Membuat gambar mengecil saat tombol ditekan */
+  }
+
+  .keterangan {
+    margin: auto;
+    color: #fff6d9;
+    margin-top: -7px;
+    width: 240px; /* Lebar persegi panjang */
+    height: 100px; /* Tinggi persegi panjang */
+    background-image: url(IMG/keterangan.png);
+    background-size: cover; /* Menutupi seluruh layar */
+  }
+  #jenispohontext {
+    margin-top: -92px;
+    font-size: 13px;
+    color: #fff6d9;
+  }
+  #jenispohon {
+    margin-top: 18px;
+    margin-left: 80px;
+    width: 200px; /* Menentukan lebar maksimal dari paragraf */
+    word-wrap: break-word; /* Memastikan teks akan turun ke baris berikutnya jika terlalu panjang */
+    color: #fff6d9;
+    font-size: 10px;
+  }
+
+  #x {
+    margin-top: -10px;
+    margin-left: -170px;
+    width: 64px;
+    height: 55px;
+    background-color: inherit;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    z-index: 5;
+  }
+
+  #x img {
+    width: 100%; /* Mengatur lebar gambar agar sesuai dengan lebar tombol */
+    height: 100%; /* Mengatur tinggi gambar agar sesuai dengan tinggi tombol */
+    object-fit: cover; /* Untuk memastikan gambar ditampilkan dalam persegi */
+    transition: transform 0.3s ease;
+  }
+  #x:hover img {
+    transform: scale(1.5); /* Membuat gambar membesar saat dihover */
+  }
+
+  #x:active img {
+    transform: scale(0.8); /* Membuat gambar mengecil saat tombol ditekan */
+  }
+  #aboout {
+    text-shadow: -1px -1px 0 brown, /* Shadow ke kiri atas */ 1px -1px 0 brown,
+      /* Shadow ke kanan atas */ -1px 1px 0 brown,
+      /* Shadow ke kiri bawah */ 1px 1px 0 black; /* Shadow ke kanan bawah */
+    color: #fff6d9;
+    position: absolute;
+    z-index: 1;
+    margin-left: 50px;
+    margin-top: -25px;
+    font-size: 28px;
+    width: 70%;
+  }
+  .kotak_about {
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: -5px;
+    width: 360px; /* Lebar persegi panjang */
+    height: 700px; /* Tinggi persegi panjang */
+    background-image: url(IMG/kotaksuhu.png);
+    background-size: cover; /* Menutupi seluruh layar */
+  }
+  .text_abo0ut {
+    margin: 0 auto;
+    max-width: 270px;
+    margin-top: -620px;
+    font-size: 12px;
+    font-family: arial;
+    color: aliceblue;
+    z-index: 2;
+    width: 300px; /* Atur lebar sesuai kebutuhan */
+    height: 560px;
+    overflow-y: scroll; /* Menambahkan scrollbar vertikal */
+    overflow-x: hidden; /* Menyembunyikan scrollbar horizontal */
+    border: 0px solid #ccc; /* Tambahkan border untuk visual */
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  h1 {
+    font-size: 20px;
+    margin-top: -10px;
+    margin-bottom: 15px;
+    margin-right: 20px;
+    text-align: center;
+  }
+  ol {
+    padding-left: 20px;
+    text-align: left;
+  }
+  li {
+    margin-bottom: 15px;
+  }
+  #perancang {
+    margin-top: 20px;
+  }
+  .student-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .student-container img {
+    width: 80px;
+    height: 120px;
+    margin-right: 20px;
+    border-radius: 5px;
+  }
+  .student-description {
+    max-width: 500px;
+  }
+}
