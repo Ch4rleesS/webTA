@@ -488,6 +488,7 @@ body {
   }
   .animasi-skala {
     margin-top: -23px;
+    margin-left: 50px;
     width: 200px; /* Lebar persegi panjang */
     height: 100px;
     animation: skala-berulang 1s infinite alternate; /* Menerapkan animasi skala secara terus-menerus */
@@ -574,7 +575,7 @@ body {
     margin-left: 165px;
   }
   #textph {
-    margin-left: 85px;
+    margin-left: 165px;
     margin-top: 36px;
     font-size: 14px;
     width: 100%;
@@ -724,7 +725,7 @@ body {
 
   #mulai {
     margin-top: 420px;
-    margin-left: 10px;
+    margin-left: 160px;
     width: 70px;
     height: 54px;
     background-color: inherit;
@@ -749,7 +750,7 @@ body {
   }
 
   #reset {
-    margin-left: -80px;
+    margin-left: 80px;
     margin-top: 420px;
     width: 70px;
     height: 54px;
@@ -774,8 +775,8 @@ body {
   }
 
   #about {
-    margin-top: -10px;
-    margin-left: 120px;
+    margin-top: 40px;
+    margin-left: 180px;
     width: 50px;
     height: 45px;
     background-color: inherit;
@@ -786,8 +787,8 @@ body {
   }
 
   #about img {
-    width: 100%; /* Mengatur lebar gambar agar sesuai dengan lebar tombol */
-    height: 100%; /* Mengatur tinggi gambar agar sesuai dengan tinggi tombol */
+    width: 200%; /* Mengatur lebar gambar agar sesuai dengan lebar tombol */
+    height: 200%; /* Mengatur tinggi gambar agar sesuai dengan tinggi tombol */
     object-fit: cover; /* Untuk memastikan gambar ditampilkan dalam persegi */
     transition: transform 0.3s ease;
   }
@@ -811,11 +812,12 @@ body {
   #jenispohontext {
     margin-top: -92px;
     font-size: 13px;
+    margin-left: 150px;
     color: #fff6d9;
   }
   #jenispohon {
     margin-top: 18px;
-    margin-left: 80px;
+    margin-left: 120px;
     width: 200px; /* Menentukan lebar maksimal dari paragraf */
     word-wrap: break-word; /* Memastikan teks akan turun ke baris berikutnya jika terlalu panjang */
     color: #fff6d9;
@@ -824,7 +826,7 @@ body {
 
   #x {
     margin-top: -10px;
-    margin-left: -170px;
+    margin-left: 20px;
     width: 64px;
     height: 55px;
     background-color: inherit;
@@ -854,7 +856,7 @@ body {
     color: #fff6d9;
     position: absolute;
     z-index: 1;
-    margin-left: 50px;
+    margin-left: 100px;
     margin-top: -25px;
     font-size: 28px;
     width: 70%;
