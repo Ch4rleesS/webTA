@@ -22,14 +22,69 @@
           id="x"
           onclick="window.location.href='index.html'"
         >
-          <img src="IMG/tombolexit.png" alt="gambarx" />
+          <img src="IMG/x.png" alt="gambarx" />
         </button>
       </section>
       <section>
         <p id="aboout">Tentang</p>
         <div class="kotak_about"></div>
         <div class="text_abo0ut">
-          <h1>Instruksi Penggunaan Alat</h1>
+          <h1 style="margin-top: -10px" id="perancang">DESKRIPSI</h1>
+          <p style="text-align: justify; margin-bottom: 40px">
+            Alat pemantau kualitas tanah berbasis mikrokontroler ESP32 yang
+            dirancang untuk memantau kualitas tanah dan memberikan rekomendasi
+            tanaman yang sesuai untuk ditanam. Alat ini bekerja dengan
+            mengumpulkan dan menganalisis beberapa parameter penting yang
+            mempengaruhi pertumbuhan tanaman, seperti suhu udara, kelembapan
+            udara, pH tanah, suhu tanah, dan kelembapan tanah. Data tersebut
+            diperoleh melalui sensor-sensor yang terhubung ke ESP32 dan kemudian
+            dikirimkan ke database spreadsheet yang tersimpan di cloud melalui
+            jaringan internet. Database ini menyimpan informasi lengkap tentang
+            berbagai jenis tanaman beserta parameter optimal yang dibutuhkan
+            untuk pertumbuhannya. Selain itu, database tersebut terhubung dengan
+            aplikasi di smartphone, memungkinkan pengguna untuk melihat data dan
+            rekomendasi tanaman langsung di layar ponsel mereka. Alat ini sangat
+            bermanfaat bagi petani, karena dapat membantu mereka memilih tanaman
+            yang paling sesuai dengan kondisi tanah mereka, sehingga dapat
+            meningkatkan hasil panen secara signifikan.
+          </p>
+          <img
+            src="IMG/desapk.png"
+            alt="Contoh Sensor di Tanah"
+            width="250"
+            height="250"
+          />
+          <div class="des-tombol">
+            <img src="IMG/btn_mulai.png" alt="Alviyan Syafriansyah Matondang" />
+            <div class="student-description">
+              <p>
+                <strong>Tombol mulai</strong> Berfungsi untuk menampilkan Nilai
+                sensor
+              </p>
+            </div>
+          </div>
+          <div class="des-tombol">
+            <img src="IMG/btn_reset.png" alt="Alviyan Syafriansyah Matondang" />
+            <div class="student-description">
+              <p>
+                <strong>Tombol reset</strong> Berfungsi untuk menghilangkan
+                nilai nilai sensor tanah pada menu utama
+              </p>
+            </div>
+          </div>
+          <div class="des-tombol">
+            <img
+              src="IMG/tombol_about.png"
+              alt="Alviyan Syafriansyah Matondang"
+            />
+            <div class="student-description">
+              <p>
+                <strong>Tombol Tentang</strong> Berfungsi untuk menampilkan menu
+                tentang aplikasi
+              </p>
+            </div>
+          </div>
+          <h1 style="margin-top: 40px">Instruksi Penggunaan Alat</h1>
           <ol>
             <li>
               Tancapkan sensor-sensor ke dalam tanah seperti contoh di bawah:
@@ -65,12 +120,7 @@
             </li>
             <li>Hasil akan tampil.</li>
           </ol>
-          <h1 id="perancang">FUNGSI APLIKASI</h1>
-          <p>
-            Apliakasi di buat untuk dapat memantau dan melihat kualitas tanah
-            serata dapat memberikan rekomendasi tanaman yang dapat di tanam di
-            tanah / lahan tersebut
-          </p>
+
           <h1 id="perancang">PERANCANG</h1>
           <div class="student-container">
             <img src="IMG/Gofar.jpg" alt="Gofar Chairulloh Annam" />

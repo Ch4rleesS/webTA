@@ -903,6 +903,17 @@ body {
   #perancang {
     margin-top: 20px;
   }
+  .des-tombol {
+    display: flex;
+    align-items: center;
+    margin-bottom: -5px;
+  }
+  .des-tombol img {
+    width: 64px;
+    height: 64px;
+    margin-right: 20px;
+    border-radius: 5px;
+  }
   .student-container {
     display: flex;
     align-items: center;
