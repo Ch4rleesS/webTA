@@ -812,12 +812,12 @@ body {
   #jenispohontext {
     margin-top: -92px;
     font-size: 13px;
-    margin-left: 120px;
+    margin-left: 130px;
     color: #fff6d9;
   }
   #jenispohon {
     margin-top: 18px;
-    margin-left: 83px;
+    margin-left: 80px;
     width: 200px; /* Menentukan lebar maksimal dari paragraf */
     word-wrap: break-word; /* Memastikan teks akan turun ke baris berikutnya jika terlalu panjang */
     color: #fff6d9;
@@ -927,5 +927,24 @@ body {
   }
   .student-description {
     max-width: 500px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  th,
+  td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+  }
+  th {
+    background-color: #9e9e9e;
+  }
+  caption {
+    font-size: 1.5em;
+    margin-bottom: 10px;
   }
 }
